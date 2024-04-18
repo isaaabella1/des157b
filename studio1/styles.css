@@ -1,0 +1,56 @@
+/* styles.css */
+
+/* Ensure video fills its container */
+#myVideo,
+#myVideo2 {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main {
+    position: relative; /* Ensure relative positioning for absolute elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure video takes up full height of viewport */
+    background-color: rgb(31, 31, 31);
+}
+
+
+#poem p {
+    position: absolute;
+    padding: 1em;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.475);
+    transition: all 2.5s;
+}
+
+#line1 {
+    bottom: 0%;
+    left: 0%;
+}
+
+#line2 {
+    bottom: 10%;
+    left: 10%;
+}
+
+#line3 {
+    bottom: 20%;
+    left: 20%;
+}
+#line4 {
+    bottom: 30%;
+    left: 30%;
+}
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
