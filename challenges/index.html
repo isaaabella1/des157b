@@ -10,10 +10,20 @@
         var pet = {
             name:"spot",
             species: "dog"
+            
         }
         pet.name = "stacy";
-        
-        console.log(name);
+        pet.qualities = {
+            color:"brown",
+            disposition: 'friendly',
+            size: 'friendly',
+            supplies: ['food','water','bed']
+            
+        }
+        pet.greating = function() {alert('Hello There')}
+        greating();
+        console.log(pet);
+        console.log(`I need to get ${pet.qualities.supplies.length} supplies for ${pet.name} at the store`);
     </script>
 </body>
 </html>
