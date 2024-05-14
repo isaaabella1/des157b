@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        function makeUpperCase(aString){ //regular
+            return aString.toUpperCase();
+        }
+        const makeUpperCase2 = function(aString){ //function expression
+            return aString.toUpperCase();
+        }
+        const makeUpperCaseArrow = aString=>aString.toUpperCase();    //arrow function, parenth not needed if only one parameter
+            //if the function is only doing one thing
+
+        console.log(makeUpperCase2('hello'));
+
+
+        const fullName = (fname,lname)=>`${fname} ${lname}`; //more than 1 parameter needs ()
+        console.log(fullName("hello","there"));  //since its a function expression it can be called mult times
+        
+
+        const fullName2 = () => { //dumb func but shows when theres more in the function example
+	        const fname = "Maria";
+	        const lname = "Sanchez";
+	        return `${fname} ${lname}`;
+        }
+
+        //for each method, convert to arrow function
+
+        // const fruit = ["banana", "apple", "lemon", "kiwi"];
+        // const upperFruit = [];
+
+        // fruit.forEach( function(thisFruit){
+        //         upperFruit.push(thisFruit.toUpperCase());
+        // });
+
+        //this is the arrow version
+        const fruit = ["banana", "apple", "lemon", "kiwi"];
+        const upperFruit = [];
+
+        fruit.forEach(thisFruit => {
+            upperFruit.push(thisFruit.toUpperCase());
+        });
+        const employee = function( fname, lname, jobTitle ){ //creates object template
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            // this.fullName = function(){
+            //     return `${fname} ${lname}`;
+	        // }
+            this.fullName = () => `${fname} ${lname}`;
+        }
+    const id1234 = new employee('bob','smith','Mechanic');;
+    console.log(id1234.fname)
+    console.log(id1234.fullName())
+
+
+       
+    </script>
+</body>
+</html>
