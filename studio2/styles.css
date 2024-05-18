@@ -1,15 +1,31 @@
-/* Style the container for the grid */
 .names-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width as needed */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
-/* Style each name div */
 .name {
-    border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f9f9f9;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: blue; /* Set background color to blue */
+    color: white; /* Set text color to white for contrast */
     text-align: center;
+    align-content: center;
 }
+
+#popup-content {
+    position: fixed; /* Ensure the popup stays in a fixed position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure the popup appears above other content */
+}
+
